@@ -1,0 +1,591 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gupta Shalini & Associates (GSA India)</title>
+
+  <!-- ✅ Font Awesome (All Icons) -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css"
+/>
+
+
+  <!-- ✅ Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gsaBlue: '#083D5F',
+            gsaLight: '#81B84D',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ✅ Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { opacity: 0; transition: opacity 1s ease-in-out; }
+    body.loaded { opacity: 1; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .glass-card {
+      background: #81b84d49;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(91, 58, 72, 0.2);
+    }
+  </style>
+</head>
+
+
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 left-0 bg-white/90 backdrop-blur shadow z-50">
+        <div class="container mx-auto flex justify-between items-center py-3 px-6">
+
+            <!-- Logo + Company Name -->
+            <div class="flex items-center space-x-3">
+                <img src="images/GSA-Logo.png" alt="GSA India Logo" class="h-11 w-auto">
+                <!-- <h1 class="text-2xl font-bold text-gsaBlue">GSA India</h1> -->
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="flex space-x-6 text-sm font-medium">
+                    <li><a href="#home" class="hover:text-gsaLight">Home</a></li>
+                    <li><a href="#about" class="hover:text-gsaLight">About</a></li>
+                    <li><a href="#services" class="hover:text-gsaLight">Services</a></li>
+                    <li><a href="#values" class="hover:text-gsaLight">Values</a></li>
+                    <li><a href="#contact" class="hover:text-gsaLight">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO SLIDER -->
+    <section id="home" class="relative h-screen">
+        <div class="swiper h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide bg-cover bg-center" style="background-image:url('images/Slider1.jpg');">
+                    <div
+                        class="bg-black/50 w-full h-full flex flex-col items-center justify-center text-white text-center px-6">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">Business & AI Advisory</h2>
+                        <p class="text-lg mb-6">Empowering organizations with data-driven insights.</p>
+                        <a href="#services"
+                            class="bg-white text-gsaBlue font-semibold py-3 px-6 rounded-lg shadow hover:bg-blue-50 transition">Explore
+                            Services</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide bg-cover bg-center" style="background-image:url('images/Slider2.jpg');">
+                    <div
+                        class="bg-black/50 w-full h-full flex flex-col items-center justify-center text-white text-center px-6">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">Audit & Assurance Excellence</h2>
+                        <p class="text-lg mb-6">Delivering trust, transparency, and timely solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide bg-cover bg-center" style="background-image:url('images/Slider3.jpg');">
+                    <div
+                        class="bg-black/50 w-full h-full flex flex-col items-center justify-center text-white text-center px-6">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">Financial & Management Consulting</h2>
+                        <p class="text-lg mb-6">Transforming businesses with strategic excellence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 bg-gray-50 fade-in">
+        <div class="container mx-auto px-6 md:flex items-center gap-10">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=900&q=80"
+                    alt="About Us" class="rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-bold text-gsaBlue mb-4">About Us</h3>
+                <p class="mb-4">Founded in <strong>September 2025</strong>, Gupta Shalini & Associates (GSA) specializes
+                    in <strong>Business & AI Advisory, Audit, Taxation, Process Transformation, and
+                        Consultancy</strong>. We help organizations embrace innovation, efficiency, and compliance.</p>
+                <p>Our diversified practice extends to Management & Financial Consultancy, Information System Audits,
+                    and Corporate Law services.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVICES -->
+    <style>
+        /* Services */
+        #services {
+            background-position-x: 61% !important;
+            background-position-y: 49% !important;
+        }
+    </style>
+    <section id="services" class="py-20 bg-white fade-in relative"
+        style="background-image:url('images/Our-Services.jpg'); background-size:cover; background-position:center;">
+
+        <div class="container mx-auto px-6 flex justify-start">
+            <!-- Left: Card area (70%) -->
+            <div class="w-full md:w-[70%]">
+                <h3 class="text-3xl font-bold text-gsaBlue mb-12 text-left">Our Services</h3>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Business Advisory -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-briefcase text-gsaLight text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Business Advisory
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Strategic guidance to optimize operations, performance, and organizational growth.</p>
+                    </div>
+
+                    <!-- Business Process Reengineering -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-cogs text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Business Process Reengineering
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Redesigning core business processes to achieve dramatic improvements in productivity and
+                            quality.</p>
+                    </div>
+
+                    <!-- Process Transformation -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-sync-alt text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Process Transformation
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Streamlining workflows and aligning operations with digital-first strategies.</p>
+                    </div>
+
+                    <!-- Advisory on Gen AI and Agentic AI -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-robot text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Advisory on Gen AI and Agentic AI
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Guiding businesses to leverage Generative and Agentic AI for automation and innovation.</p>
+                    </div>
+
+                    <!-- Management Consultancy & Advisory -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-users-cog text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Management Consultancy & Advisory
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Helping leaders make informed decisions and drive strategic business outcomes.</p>
+                    </div>
+
+                    <!-- Audit & Assurance Services -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-file-shield text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Audit & Assurance Services
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Ensuring transparency, accuracy, and confidence in financial reporting.</p>
+                    </div>
+
+                    <!-- Taxation Services -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-file-invoice-dollar text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Taxation Services
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Comprehensive tax planning, compliance, and representation for all sectors.</p>
+                    </div>
+
+                    <!-- GST -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-coins text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            GST
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>End-to-end Goods & Services Tax consultancy and compliance management.</p>
+                    </div>
+
+                    <!-- Accounting & Financial Reporting -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-calculator text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Accounting & Financial Reporting
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Accurate financial management with adherence to Indian and global standards.</p>
+                    </div>
+
+                    <!-- Corporate Law & Secretarial Services -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-balance-scale text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Corporate Law & Secretarial Services
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Ensuring statutory compliance and corporate governance excellence.</p>
+                    </div>
+
+                    <!-- Financial & Investment Advisory -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-chart-line text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Financial & Investment Advisory
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Tailored investment strategies and portfolio management for long-term success.</p>
+                    </div>
+
+                    <!-- Risk Advisory & Compliance -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-shield-alt text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Risk Advisory & Compliance
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Identifying and mitigating business risks with comprehensive compliance frameworks.</p>
+                    </div>
+
+                    <!-- Information Technology (IT) Services -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-network-wired text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Information Technology (IT) Services
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Innovative IT solutions and digital transformation strategies for modern enterprises.</p>
+                    </div>
+
+                    <!-- Other Specialized Services -->
+                    <div
+                        class="group p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl shadow hover:shadow-2xl transform hover:-translate-y-2 transition relative overflow-hidden">
+                        <i class="fas fa-lightbulb text-gsaBlue text-5xl mb-4"></i>
+                        <h4
+                            class="relative font-semibold text-lg mb-2 transition-colors duration-300 text-gsaLight group-hover:text-gsaBlue">
+                            Other Specialized Services
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-gsaBlue transition-all duration-500 group-hover:w-full"></span>
+                        </h4>
+                        <p>Customized consulting and specialized professional services across industries.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right empty area (30%) -->
+            <div class="hidden md:block md:w-[30%]"></div>
+        </div>
+    </section>
+
+    <!-- Optional small style tweak -->
+    <style>
+        h4 span {
+            bottom: -4px;
+        }
+    </style>
+
+
+
+    <style>
+        .glass-card i {
+            animation: pulse 2.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+    </style>
+
+    <!-- VALUES -->
+    <section id="values" class="py-20 bg-gsaBlue text-white fade-in">
+        <!-- bg-gradient-to-br from-blue-600 to-blue-400  -->
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12">Our Core Values</h3>
+            <div class="space-y-12">
+                <!-- Value 1 -->
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 text-center md:text-right">
+                        <h4 class="text-2xl font-semibold mb-2"><i class="fa-solid fa-handshake mr-2"></i>Client First
+                        </h4>
+                        <p class="text-blue-100">We prioritize our clients’ growth, building lasting trust and value.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center md:justify-start">
+                        <div class="glass-card p-6 rounded-2xl w-64 text-center">
+                            <i class="fas fa-user-tie text-4xl mb-3"></i>
+                            <p>Focused on client-centric excellence and proactive solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-8 md:space-x-reverse">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h4 class="text-2xl font-semibold mb-2"><i class="fa-solid fa-award mr-2"></i>Process & Service
+                            Excellence</h4>
+                        <p class="text-blue-100">We strive for continuous improvement and exceptional delivery
+                            standards.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center md:justify-end">
+                        <div class="glass-card p-6 rounded-2xl w-64 text-center">
+                            <i class="fas fa-cogs text-4xl mb-3"></i>
+                            <p>Driving excellence through disciplined processes and quality outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 text-center md:text-right">
+                        <h4 class="text-2xl font-semibold mb-2"><i class="fa-solid fa-compass mr-2"></i>Value Based
+                            Leadership</h4>
+                        <p class="text-blue-100">Integrity, ethics, and responsibility guide every decision we make.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center md:justify-start">
+                        <div class="glass-card p-6 rounded-2xl w-64 text-center">
+                            <i class="fas fa-bullseye text-4xl mb-3"></i>
+                            <p>Leading with purpose and accountability to create lasting impact.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-8 md:space-x-reverse">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h4 class="text-2xl font-semibold mb-2"><i class="fa-solid fa-chart-line mr-2"></i>Better than
+                            Yesterday</h4>
+                        <p class="text-blue-100">We evolve continuously to exceed expectations every single day.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center md:justify-end">
+                        <div class="glass-card p-6 rounded-2xl w-64 text-center">
+                            <i class="fas fa-rocket text-4xl mb-3"></i>
+                            <p>Constant learning and innovation fuel our progress.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value 5 -->
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 text-center md:text-right">
+                        <h4 class="text-2xl font-semibold mb-2"><i class="fa-solid fa-lock mr-2"></i>Professionalism &
+                            Confidentiality</h4>
+                        <p class="text-blue-100">We maintain integrity, respect, and confidentiality in all our
+                            dealings.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center md:justify-start">
+                        <div class="glass-card p-6 rounded-2xl w-64 text-center">
+                            <i class="fas fa-shield-halved text-4xl mb-3"></i>
+                            <p>Upholding professional ethics and trust in every engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact"
+  class="relative py-20 fade-in bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center"
+    style="background-image:url('images/Contact-BG.jpg'); filter: brightness(0.4);"></div>
+  <div class="absolute inset-0 bg-gradient-to-tr from-gsaBlue/70 via-blue-700/60 to-gsaLight/50 opacity-80"></div>
+
+  <!-- Content -->
+  <div class="relative container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-white">
+    
+    <!-- LEFT INFO -->
+    <div class="space-y-6">
+      <h3 class="text-4xl font-bold mb-4 flex items-center gap-3">
+        <i class="fa-solid fa-comments text-gsaLight text-4xl"></i>
+        Get in Touch
+      </h3>
+
+<div class="space-y-4">
+  <div class="flex items-center space-x-4">
+    <i class="fa-solid fa-location-dot text-2xl text-gsaLight"></i>
+    <span>LI: Gupta Shalini & Associates (GSA-India)<br>
+F : GSA-India<br>
+Insta: GSA-India 
+
+<!-- Plot No. 24, Sector 8, Gurugram, Haryana, India -->
+</span>
+  </div>
+  <div class="flex items-center space-x-4">
+    <i class="fa-solid fa-phone text-2xl text-gsaLight"></i>
+    <a href="tel:+919999999999" class="hover:underline">+91 99999 99999</a>
+  </div>
+  <div class="flex items-center space-x-4">
+    <i class="fa-solid fa-envelope text-2xl text-gsaLight"></i>
+    <a href="mailto:shalini@gsa-india.com" class="hover:underline">shalini@gsa-india.com</a>
+  </div>
+  <div class="flex items-center space-x-4">
+    <i class="fa-solid fa-globe text-2xl text-gsaLight"></i>
+    <a href="https://www.gsa-india.com" target="_blank" class="hover:underline">www.gsa-india.com</a>
+  </div>
+  <div class="flex items-center space-x-4">
+    <i class="fa-solid fa-clock text-2xl text-gsaLight"></i>
+    <span>Mon - Sat: 9:00 AM – 6:00 PM</span>
+  </div>
+</div>
+
+
+      <!-- Socials -->
+      <div class="flex space-x-5 mt-6">
+        <a href="#" class="text-white hover:text-gsaLight"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+        <a href="#" class="text-white hover:text-gsaLight"><i class="fa-brands fa-facebook text-2xl"></i></a>
+        <a href="#" class="text-white hover:text-gsaLight"><i class="fa-brands fa-instagram text-2xl"></i></a>
+        <a href="#" class="text-white hover:text-gsaLight"><i class="fa-brands fa-twitter text-2xl"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-xl text-gray-800">
+      <h4 class="text-2xl font-semibold mb-6 text-gsaBlue flex items-center gap-2">
+        <i class="fa-solid fa-paper-plane text-gsaLight"></i> Send Us a Message
+      </h4>
+      <form class="space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="relative">
+            <i class="fa-solid fa-user absolute left-3 top-3.5 text-gray-400"></i>
+            <input type="text" placeholder="Your Name"
+              class="w-full pl-10 p-3 border rounded focus:ring-2 focus:ring-gsaLight">
+          </div>
+          <div class="relative">
+            <i class="fa-solid fa-envelope absolute left-3 top-3.5 text-gray-400"></i>
+            <input type="email" placeholder="Your Email"
+              class="w-full pl-10 p-3 border rounded focus:ring-2 focus:ring-gsaLight">
+          </div>
+        </div>
+        <div class="relative">
+          <i class="fa-solid fa-phone absolute left-3 top-3.5 text-gray-400"></i>
+          <input type="text" placeholder="Your Phone"
+            class="w-full pl-10 p-3 border rounded focus:ring-2 focus:ring-gsaLight">
+        </div>
+        <div class="relative">
+          <i class="fa-solid fa-comment-dots absolute left-3 top-3.5 text-gray-400"></i>
+          <textarea placeholder="Your Message" rows="4"
+            class="w-full pl-10 p-3 border rounded focus:ring-2 focus:ring-gsaLight"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-gsaBlue hover:bg-gsaLight text-white font-semibold py-3 rounded-lg shadow-md transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="relative container mx-auto px-6 mt-16">
+    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+      <iframe class="w-full h-80 border-0"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8390016335447!2d77.0707583!3d28.6129425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04a3cf7e1d17%3A0xa06f4a45686a6e72!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1679326754849!5m2!1sen!2sin"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-gsaBlue text-white py-6 text-center">
+        <p>© 2025 Gupta Shalini & Associates | Designed & Developed by GSA India</p>
+    </footer>
+
+    <!-- ✅ JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Load animation
+        window.addEventListener('load', () => { document.body.classList.add('loaded'); });
+
+        // Fade-in animation
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.2 });
+        fadeEls.forEach(el => observer.observe(el));
+
+        // Swiper init
+        new Swiper('.swiper', {
+            loop: true,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+        });
+    </script>
+</body>
+
+</html>
